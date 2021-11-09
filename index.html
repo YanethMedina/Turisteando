@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>Turisteando</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" href="CSS/estilo.css">
+    </head>
+    <body id="contenido">
+        <header id="encabezado" id="cont">
+            <p>Turisteando</p>
+        </header>
+        <section id="cont">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 p-3 columna">
+                    <button id="btngto" @click="mostrarGto = true">Guanajuato</button>
+                    <button id="btnira" @click="mostrarIra = true">Irapuato</button>
+                    <button id="btnleon" @click="mostrarLeon = true">León</button>
+                    <button id="btncel" @click="mostrarCel= true">Celaya</button>
+                    <button id="btnsal" @click="mostrarSal = true">Salamanca</button>
+                    <button id="btnsma" @click="mostrarSMA = true">San Miguel de Allende</button>
+                    <button id="btnsil" @click="mostrarSil = true">Silao</button>
+                    <button id="btnyur" @click="mostrarYur = true">Yuriria</button>
+                    
+                    <alerta @ocultar="mostrarGto = false" v-show="mostrarGto" tipo="alerta--info" posicion="alerta--arriba-izquierda">
+                        <template slot="header">
+                            "Lugar de muchos cerros"
+                        </template>
+                        <template>
+                            <img src="Assets/Gto.jpg" alt="Gto" id="images">
+                        </template>
+                        <template slot="footer">
+                            Su red de túneles, pasajes y calles estrechas se representa en el Callejón del Beso, llamado así porque los balcones están tan cerca entre ellos que una pareja alcanza a besarse.
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="mostrarIra = false" v-show="mostrarIra" tipo="alerta--exito" posicion="alerta--arriba-derecha">
+                        <template slot="header">
+                            "Ciudad de las Fresas"
+                        </template>
+                        <template>
+                            <img src="Assets/Ira.jpg" alt="Ira" id="images"> 
+                        </template>
+                        <template slot="footer">
+                            A lo largo de 45 años, la Cabalgata de Reyes Magos ha llenado de esperanza, solidaridad, fe y amor, los corazones de miles de personas que disfrutan ver llegar a Irapuato a Melchor, Gaspar y Baltazar.
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="mostrarLeon = false" v-show="mostrarLeon" tipo="alerta--advertencia" posicion="alerta--abajo-derecha" frase="No te desesperes">
+                        <template slot="header">
+                            "Ciudad del Zapato"<br> 
+                        </template>
+                        <template>
+                            <img src="Assets/Leon.jpg" alt="Leon" id="images">
+                        </template>
+                        <template slot="footer">
+                            El Palacio Municipal se ubica en la Plaza Principal arbolada y tiene murales que recorren la historia de la región. El Templo Expiatorio del Sagrado Corazón, de estilo neogótico, tiene una cripta con catacumbas.
+                        </template>
+                    </alerta>
+
+                    <alerta @ocultar="mostrarCel = false" v-show="mostrarCel" tipo="alerta--error" posicion="alerta--abajo-izquierda" frase="Corregir" :listado="tipos">
+                        <template slot="header">
+                            "La Puerta de Oro del Bajío"<br>
+                        </template>
+                        <template>
+                            <img src="Assets/Cel.jpg" alt="Cel" id="images">
+                        </template>
+                        <template slot="footer">
+                            Recorrer Celaya es muy agradable a la vista por el estilo neoclásico que decora las paredes de sus edificaciones más emblemáticas como la catedral, el Templo de la Tercera Orden o el Templo del Carmen, este último construido por el reconocido arquitecto mexicano Francisco Eduardo Tresguerras.
+                        </template>
+                    </alerta>
+                    <alerta @ocultar="mostrarSal = false" v-show="mostrarSal" tipo="alerta--error" posicion="alerta--arriba-derecha" frase="Corregir" :listado="tipos">
+                        <template slot="header">
+                            "Lugar sobre tepetate"<br>
+                        </template>
+                        <template>
+                            <img src="Assets/Sa.jpg" alt="Sa" id="images">
+                        </template>
+                        <template slot="footer">
+                            La ciudad tiene una rica producción artesanal, especialmente en el área de la cera: ceriescultura y cera escamada, bronce y el pewter. En vísperas Navideñas se exhibe el Nacimiento Monumental de Salamanca en el cual las figuras están hechas de cera por artesanos de la localidad y son exhibidas en la casa de la cultura. 
+                        </template>
+                    </alerta>
+                    <alerta @ocultar="mostrarSMA = false" v-show="mostrarSMA" tipo="alerta--error" posicion="alerta--abajo-derecha" frase="Corregir" :listado="tipos">
+                        <template slot="header">
+                            San Miguel de Allende<br>
+                        </template>
+                        <template>
+                            <img src="Assets/SMA.jpg" alt="SMA" id="images">
+                        </template>
+                        <template slot="footer">
+                            Famoso por su historia, por su encanto, por su clima templado, su colorido, el lugar donde se encuentra ubicado y, sobre todo, porque se ha convertido en un destino de lo más interesante para los visitantes, no sólo por su arquitectura y singularidad, también por su oferta cultural.
+                        </template>
+                    </alerta>
+                    <alerta @ocultar="mostrarSil = false" v-show="mostrarSil" tipo="alerta--error" posicion="alerta--arriba-izquierda" frase="Corregir" :listado="tipos">
+                        <template slot="header">
+                            "Lugar de Humaredas"<br>
+                        </template>
+                        <template>
+                            <img src="Assets/Silao.jpg" alt="Silao" id="images">
+                        </template>
+                        <template slot="footer">
+                            Municipio y ciudad de gente trabajadora, y de carácter emprendedor, que destaca en la agricultura, la industria y el comercio.
+                        </template>
+                    </alerta>
+                    <alerta @ocultar="mostrarYur = false" v-show="mostrarYur" tipo="alerta--error" posicion="alerta--abajo-izquierda" frase="Corregir" :listado="tipos">
+                        <template slot="header">
+                            "Lago de sangre"<br>
+                        </template>
+                        <template>
+                            <img src="Assets/Yuriria.jpg" alt="Yuriria" id="images">
+                        </template>
+                        <template slot="footer">
+                            Llamado así por los sugestivos colores de sus aguas, las cuales con el reflejo del sol forman tonos rojizos, escarlatas, e inclusive verdosos, similares a los tonos de la sangre.
+                        </template>
+                    </alerta>
+                </div>
+            </div>
+        </section>
+
+        <template id="mensajeAlerta">
+            <article class="alerta" :class="[tipo, posicion]">
+                <h3 class="alerta__header">
+                    <button class="btn btn-dark" @click="ocultarMensaje()">X</button>
+                    <slot name="header" ]>
+                       Un valor vacio para ser llenado
+                    </slot>
+                </h3>
+                <span>
+                    <slot>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit omnis modi sequi, veritatis et
+                        ea praesentium a cupiditate, amet optio, unde sit officiis alias voluptatem sapiente error odio
+                        numquam aliquam!
+                    </slot>
+                </span>
+                <p class="alerta__contenido">
+                    <slot name="datos" v-for="error in listado" :nombre="error"></slot>
+                </p>
+                <span class="alerta__footer">
+                    <slot name="footer" :tipo="alerta"></slot>
+                </span>
+            </article>
+        </template>
+    </div>
+    </section>
+        <footer id="pie">
+            <p>Guanajuato</p>
+            <h4> Elaboro: Yaneth Medina</h4>
+    </section>
+    <script src="JS/evj4.js"></script>
+    </body>
+</html>

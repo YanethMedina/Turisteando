@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+}
+#encabezado{
+    background-color: #3E065F;
+    text-align: center;
+    font-size: 60px;
+    font-family: Impact;
+    color: #E2C2B9;
+    text-shadow: 5px 5px 5px #8236CB;
+}
+#contenido{
+    background-color: #FDD2BF;
+    background-image: url("../Assets/colash.jpg");
+    width: 100%;
+    height: 100%;
+}
+#pie{
+    background-color: #3E065F;
+    text-align: center;
+    font-size: 15px;
+    font-family: Impact;
+    color: #E2C2B9;
+}
+#images{
+    width: 300px;
+    height: 200px;
+}
+#btngto{
+    background-color: #0F00FF;
+    width: 150px;
+    height: 50px;
+    margin-left: 250px;
+}
+#btnira{
+    background-color: #FF0000;
+    width: 150px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+#btnleon{
+    background-color: #3E7C17;
+    width: 150px;
+    height: 50px;
+    margin-left: 150px;
+}
+#btncel{
+    background-color: #F0A500;
+    width: 150px;
+    height: 50px;
+    margin-left: 350px;
+    margin-top: 100px;
+}
+#btnsal{
+    background-color: #FF0075;
+    width: 150px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+#btnsma{
+    background-color: #7027A0;
+    width: 150px;
+    height: 50px;
+    margin-left: 450px;
+    margin-top: 100px;
+}
+#btnsil{
+    background-color: #B980F0;
+    width: 150px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+#btnyur{
+    background-color: #28FFBF;
+    width: 150px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+.alerta--arriba-izquierda {
+    left: 10px;
+    top: 10px;
+}
+.alerta--abajo-izquierda {
+    left: 10px;
+    bottom: 10px;
+}
+.alerta--arriba-derecha {
+    right: 10px;
+    top: 10px;
+}
+.alerta--abajo-derecha {
+    right: 10px;
+    bottom: 10px;
+}
+/* Estilo */
+.alerta--info {
+    background-color: #00f9fd;
+}
+.alerta--exito {
+    background-color: #90ee90;
+}
+.alerta--advertencia {
+    background-color: #ffff88;
+}
+.alerta--error {
+    background-color: #cd5c5c;
+}
+/* Bloques */
+.alerta {
+    width: 300px;
+    border-radius: 15px;
+    background-color: lightgray;
+    border: 1px solid white;
+    box-shadow: 1px 1px 2px gray;
+    position: absolute;
+}
+
+/* Elementos */
+.alerta__header {
+    border-bottom: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  font-family:cursive;
+}
+
+.alerta__contenido {
+    font-size: 14px;
+    padding: 10px;
+    
+}
+
+.alerta__footer {
+    border-top: 1px solid white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    font-family: cursive;
+}
